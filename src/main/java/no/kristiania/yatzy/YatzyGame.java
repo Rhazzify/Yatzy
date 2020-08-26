@@ -20,10 +20,18 @@ public class YatzyGame {
                     return value*2;
                 }
             }
-        }if(category == YatzyCategory.THREE_OF_A_KIND) {
+        }
+        if(category == YatzyCategory.THREE_OF_A_KIND) {
             for(int value = frequencies.length - 1; value >= 0; value--){
                 if(frequencies[value] == 3){
                     return value*3;
+                }
+            }
+        }
+        if(category == YatzyCategory.FOUR_OF_A_KIND) {
+            for(int value = frequencies.length - 1; value >= 0; value--){
+                if(frequencies[value] == 4){
+                    return value*4;
                 }
             }
         }
