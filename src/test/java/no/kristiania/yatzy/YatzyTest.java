@@ -8,6 +8,11 @@ public class YatzyTest {
     @Test
     void shouldScoreOnes(){
         assertEquals(4, new YatzyGame().score(YatzyCategory.ONES, new int []{1,1,2,1,1}));
-        assertEquals(4, new YatzyGame().score(YatzyCategory.ONES, new int []{1,1,2,1,1}));
+        assertEquals(2, new YatzyGame().score(YatzyCategory.ONES, new int []{6,5,2,1,1}));
+    }
+    @Test
+    void shouldScoreTwos(){
+        assertEquals(2, new YatzyGame().score(YatzyCategory.TWOS, new int []{1,1,2,1,1}));
+        assertEquals(2, new YatzyGame().score(YatzyCategory.TWOS, new int []{6,5,2,1,1}));
     }
 }
