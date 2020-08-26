@@ -10,14 +10,20 @@ public class YatzyGame {
                 result += die;
             }
         }
+        int[] frequencies = new int[7];
+        for(int die : dice){
+            frequencies[die]++;
+        }
         if(category == YatzyCategory.PAIR) {
-            int[] frequencies = new int[7];
-            for(int die : dice){
-                frequencies[die]++;
-            }
             for(int value = frequencies.length - 1; value >= 0; value--){
                 if(frequencies[value] == 2){
                     return value*2;
+                }
+            }
+        }if(category == YatzyCategory.THREE_OF_A_KIND) {
+            for(int value = frequencies.length - 1; value >= 0; value--){
+                if(frequencies[value] == 3){
+                    return value*3;
                 }
             }
         }
